@@ -1,3 +1,4 @@
+# NOTE: run source.sh first to activate env
 # NOTE: see https://github.com/frgsimpson/kitt/issues/1
 all:
 	cat Makefile
