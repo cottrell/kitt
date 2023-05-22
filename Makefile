@@ -29,3 +29,5 @@ train:
 	python kitt/prototype/scripts/train_classifier.py
 	# OSError: Unable to open file (unable to open file: name = '/home/cottrell/dev/kitt/datasets/64_4d_max_exp_1_prod_2_random_inputs/train.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
 
+linear_kernel_comparison:
+	python kitt/prototype/scripts/experiments/linear_kernel_comparison.py
