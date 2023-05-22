@@ -1,0 +1,7 @@
+*.pyc
+*.whl
+*.h5
+*.swp
+*.gz
+*.pickle
+saves/
