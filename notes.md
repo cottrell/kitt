@@ -1,3 +1,7 @@
+# 2023-05-23
+
+Dunno, train failing 311clone ... old orig verison lacks documentation. Basically end in failed state.
+
 # 2023-05-22
 
 conda create -n kitt python=3.7
