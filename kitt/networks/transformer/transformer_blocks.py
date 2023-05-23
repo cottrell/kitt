@@ -73,6 +73,7 @@ class MHAttentionBlock(Layer):
         result = self.final_layer(result)
 
         result = self.residual_dropout(result, training=training)
+        result = tf.cast(result, residual.dtype)
         result = result + residual
         result = self.layer_norm(result)
 

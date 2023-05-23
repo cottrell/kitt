@@ -128,7 +128,9 @@ class MultiheadAttentionMechanism(tf.Module):
         key_transpose = tf.transpose(key, (0, 1, 3, 2))
         attn = tf.matmul(query, key_transpose)
         # attn = tf.matmul(query, key.transpose(2, 3))  # B x h x N x N
+        attn = tf.cast(attn, default_float())
         attn = attn / tf.math.sqrt(tf.cast(self.num_hidden_k, default_float()))
+        # attn = attn / tf.math.sqrt(tf.cast(self.num_hidden_k, tf.float32))
         if mask is not None:
             attn = attn.masked_fill(mask == 0, -1e9)
 
