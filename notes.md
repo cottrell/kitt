@@ -35,3 +35,9 @@ Will try to install tensorflow properly with cuda on conda kitt env.
 conda install -c conda-forge cudatoolkit=11.8.0
 python3 -m pip install nvidia-cudnn-cu11==8.6.0.163 tensorflow==2.12.*
 
+See kitt/utils/save_load_models/load_kitt for how to load encoder decoder
+
+    encoder = load_model(base_path / "encoders" / encoder_identifier)
+    decoder = load_model(base_path / "decoders" / decoder_identifier)
+    tokenizer = KernelTokenizer(get_unique_product_kernels(max_terms=max_products))
+    return KITT(encoder, decoder, tokenizer, max_expression_length, min_expression_length)
