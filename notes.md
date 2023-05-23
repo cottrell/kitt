@@ -13,3 +13,10 @@ I think from kitt.prototype.evaluate_classifier import infer_top_n_expressions
 is likely what you want in the end.
 
 See ./kitt/prototype/scripts/experiments/linear_kernel_comparison.py ...
+
+See kitt/utils/save_load_models/load_kitt for how to load encoder decoder
+
+    encoder = load_model(base_path / "encoders" / encoder_identifier)
+    decoder = load_model(base_path / "decoders" / decoder_identifier)
+    tokenizer = KernelTokenizer(get_unique_product_kernels(max_terms=max_products))
+    return KITT(encoder, decoder, tokenizer, max_expression_length, min_expression_length)
