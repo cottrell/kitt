@@ -3,6 +3,10 @@
 all:
 	cat Makefile
 
+
+evaluate_kitt:
+	python ./kitt/prototype/scripts/experiments/evaluate_kitt.py
+
 generate_dataset:
 	# not sure what the difference is between all and this one
 	python kitt/prototype/scripts/generate_dataset.py
